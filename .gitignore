@@ -1,0 +1,78 @@
+##########################################################
+###    PACKAGE SYSTEMS                                 ###
+##########################################################
+
+.env
+
+node_modules/
+
+npm-shrinkwrap.json
+npm-debug.log*
+
+yarn-cache/
+yarn-debug.log*
+yarn-error.log*
+.yarn-integrity
+
+
+
+##########################################################
+###    EDITORS                                         ###
+##########################################################
+
+###  Sublime Text  ----------------------------------- ###
+.sublime-settings
+*.sublime-project
+*.sublime-workspace
+
+###  Atom  ------------------------------------------- ###
+.atomignore
+
+###  Visual Studio Code  ----------------------------- ###
+.vscode/
+
+
+
+##########################################################
+###    OPERATING SYSTEMS                               ###
+##########################################################
+
+###  macOS  ------------------------------------------ ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+###  Windows  ---------------------------------------- ###
+Thumbs.db
+Desktop.ini
+*.lnk
+
+
+
+##########################################################
+###   BUILD & COMPILATION OUTPUT                       ###
+##########################################################
+
+[Bb]in/
+[Dd]ist/
+[Tt]emp/
+[Bb]uild/
+[Dd]eploy/
+[Pp]ublic/
+[Pp]ackage/
+[Ww]ebsite/
+
+.sass-cache/
+*.css.map
+
+
+
+# I don't see any mention of this anywhere.
+# Is it part of some unknown build process?
+deploy_html/
