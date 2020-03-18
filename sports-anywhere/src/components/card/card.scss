@@ -1,0 +1,9 @@
+@import "../../config/styles/all.scss";
+
+.card {
+    margin: $component-spacing;
+    max-width: 300px;
+    &_media {
+        height: 140px,
+    }
+}
