@@ -1,0 +1,17 @@
+@import "../../config/styles/all.scss";
+
+.product-details {
+    &_nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: $component-spacing;
+    }
+    form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: $component-spacing;
+    }
+}

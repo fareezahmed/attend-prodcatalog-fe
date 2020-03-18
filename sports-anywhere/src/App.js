@@ -15,7 +15,6 @@ import NotFound from './components/notFound'
 import ProductList from './containers/productList'
 import ProductDetails from './containers/productDetails'
 
-import { products } from './config/data.json';
 import { ProductContextProvider } from './config/productContext';
 
 

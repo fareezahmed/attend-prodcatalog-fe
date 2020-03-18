@@ -22,4 +22,27 @@
     flex-direction: row;
     padding: $component-spacing;
   }
+  &_search {
+    position: relative;
+    border-radius: 4px;
+    background-color: white;
+    margin-left: 0;
+    width: 100%;
+    @media screen and (min-width: map-get($mediabreakpoints, md)) {
+      margin-left: 18px;
+      width: auto;
+    }
+
+    input {
+      padding: 6px 0 7px 25px;
+    }
+
+    &_icon {
+      height: 100%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }

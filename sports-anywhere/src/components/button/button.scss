@@ -14,43 +14,43 @@ $btn-padding-h-sml:         32px !default;
 
 $btn-theme-darkens: (
   primary: (
-    color: darken(white, 10%),
-    colorHover: darken(white, 20%),
-    bg: darken(red, 50%),
-    bgHover: darken(red, 60%),
-    border: darken(red, 0%),
-    borderHover: darken(red, 60%),
+    fontColor: white,
+    colorHover: darken(white, 10%),
+    bg: darken(pink, 50%),
+    bgHover: darken(pink, 60%),
+    border: darken(pink, 30%),
+    borderHover: darken(pink, 60%),
     disabledColor: darken(white, 60%),
     disabledBg: darken(white, 30%),
     disabledBorder: darken(white, 30%)
   ),
   secondary: (
-    color: darken(white, 10%),
-    colorHover: darken(white, 20%),
-    bg: darken($brand-blue, 10%),
-    bgHover: darken($brand-blue, 10%),
-    border: darken($brand-blue, 30%),
-    borderHover: darken($brand-blue, 50%),
+    fontColor: white,
+    colorHover: darken(white, 10%),
+    bg: darken($brand-light-blue, 10%),
+    bgHover: darken($brand-light-blue, 10%),
+    border: darken($brand-light-blue, 30%),
+    borderHover: darken($brand-light-blue, 50%),
     disabledColor: darken(white, 30%),
     disabledBg: darken(white, 10%),
     disabledBorder: darken(white, 30%)
   ),
   document: (
-    color: darken(white, 10%),
-    colorHover: darken(white, 20%),
-    bg: darken(black, 10%),
-    bgHover: darken(black, 10%),
-    border: darken(black, 30%),
-    borderHover: darken(black, 50%),
-    disabledColor: darken(grey, 30%),
-    disabledBg: darken(grey, 10%),
-    disabledBorder: darken(grey, 30%)
+    fontColor: white,
+    colorHover: darken(white, 10%),
+    bg: darken(#4caf50, 10%),
+    bgHover: darken(#4caf50, 10%),
+    border: darken(#4caf50, 30%),
+    borderHover: darken(#4caf50, 50%),
+    disabledColor: darken(white, 30%),
+    disabledBg: darken(white, 10%),
+    disabledBorder: darken(white, 30%)
   )
 )  !default;
 
 @mixin button-variant($value){
 
-  color: map-get($value, color);
+  color: map-get($value, fontColor);
   background-color: map-get($value, bg);
   border-color: map-get($value, border);
 

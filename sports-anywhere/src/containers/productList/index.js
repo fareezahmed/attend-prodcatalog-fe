@@ -2,8 +2,9 @@ import React, { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import './product-list.scss';
 
-import Button from '../../components/button';
 import Card from '../../components/card';
+import InputBase from '@material-ui/core/InputBase';
+import SearchIcon from '@material-ui/icons/Search';
 
 import { products } from '../../config/data.json';
 import { ProductContext } from '../../config/productContext';
@@ -16,13 +17,31 @@ export default () => {
     () => {
       dispatch({ type: "all", payload:  localState || products });
     },
-    [products]
+    [localState, dispatch]
   );
+
+  const onChangeHander = (e) => {
+    if(e.target.value){
+      dispatch({ type: "search", payload: e.target.value });
+    } else {
+      dispatch({ type: "all", payload:  localState || products });
+    }
+  }
 
   return (
       <div className="product-list">
         <div className="product-list_nav">
-          <Button><Link to="/details?mode=edit">Add</Link></Button>
+          <Link className="btn btn--primary btn--mini" to="/details?mode=edit">Add</Link>
+          <div className="product-list_search">
+            <div className="product-list_search_icon">
+              <SearchIcon />
+            </div>
+            <InputBase
+              placeholder="Search…"
+              inputProps={{ 'aria-label': 'search' }}
+              onChange={onChangeHander}
+            />
+          </div>
         </div>
         <div className="product-list_container">
           {
@@ -40,4 +59,3 @@ export default () => {
       </div>  
   );
 }
-

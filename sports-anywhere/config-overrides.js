@@ -16,24 +16,6 @@ module.exports = {
           'sass-loader'
         ]
       },
-      // {
-      //   test: /\.(woff(2)?)(\?v=\d+\.\d+\.\d+)?$/,
-      //   use: [{
-      //     loader: 'file-loader',
-      //   }],
-      // },
-      // {
-      //   test: /\.(jpe?g|png|gif|svg)$/i,
-      //   use: [{
-      //     loader: 'file-loader',
-      //   }],
-      // },
     ]
   },
-  // plugins: [
-  //   new CleanWebpackPlugin('build', {}),
-  //   new MiniCssExtractPlugin({
-  //     filename: 'style.[contenthash].css',
-  //   }),
-  // ],
 }
