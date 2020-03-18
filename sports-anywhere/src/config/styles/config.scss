@@ -1,0 +1,28 @@
+// Breakpoints.
+$mediabreakpoints: (
+  xs: 320px,
+  sm: 560px,
+  md: 730px,
+  lg: 960px,
+  xl: 1400px,
+) !default;
+
+// z-index
+$global-zindex: (
+  header: 1,
+) !default;
+
+$component-spacing: 18px !default;
+$component-spacing-top: 18px !default;
+$component-spacing-bottom: 18px !default;
+
+
+$border-radius:      4px !default;
+$border-width:       1px !default;
+$border-width-lg:    3px !default;
+$border-style:       solid !default;
+$border-color:       #EEEEEE !default;
+$border-width-slim:  1px;
+
+$base-font-size: 16px;
+$base-line-height: 24px;
