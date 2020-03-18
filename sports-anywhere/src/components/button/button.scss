@@ -1,0 +1,125 @@
+@import "../../config/styles/all.scss";
+
+$btn-font-weight:           bold !default;
+$btn-color:                 darken(white, 20%) !default;
+$btn-border-width:          1px !default;
+$btn-padding-v:             16px !default;
+$btn-padding-h:             32px !default;
+$btn-radius:                $border-radius !default;
+$btn-font-size:             16px !default;
+$btn-line-height:           1 !default;
+$btn-padding-v-sml:         10px !default;
+$btn-padding-h-sml:         32px !default;
+
+
+$btn-theme-darkens: (
+  primary: (
+    color: darken(white, 10%),
+    colorHover: darken(white, 20%),
+    bg: darken(red, 50%),
+    bgHover: darken(red, 60%),
+    border: darken(red, 0%),
+    borderHover: darken(red, 60%),
+    disabledColor: darken(white, 60%),
+    disabledBg: darken(white, 30%),
+    disabledBorder: darken(white, 30%)
+  ),
+  secondary: (
+    color: darken(white, 10%),
+    colorHover: darken(white, 20%),
+    bg: darken($brand-blue, 10%),
+    bgHover: darken($brand-blue, 10%),
+    border: darken($brand-blue, 30%),
+    borderHover: darken($brand-blue, 50%),
+    disabledColor: darken(white, 30%),
+    disabledBg: darken(white, 10%),
+    disabledBorder: darken(white, 30%)
+  ),
+  document: (
+    color: darken(white, 10%),
+    colorHover: darken(white, 20%),
+    bg: darken(black, 10%),
+    bgHover: darken(black, 10%),
+    border: darken(black, 30%),
+    borderHover: darken(black, 50%),
+    disabledColor: darken(grey, 30%),
+    disabledBg: darken(grey, 10%),
+    disabledBorder: darken(grey, 30%)
+  )
+)  !default;
+
+@mixin button-variant($value){
+
+  color: map-get($value, color);
+  background-color: map-get($value, bg);
+  border-color: map-get($value, border);
+
+  &.is-active,
+  &:active{
+    background-color: map-get($value, bgHover);
+  }
+
+  &:hover,
+  &:focus{
+    color: map-get($value, colorHover);
+    background-color: map-get($value, bgHover);
+    border-color: map-get($value, borderHover);
+  }
+
+  &:focus{
+    background: map-get($value, bgHover);
+  }
+
+  &.disabled,
+  &:disabled{
+    background-color: map-get($value, disabledBg);
+    color: map-get($value, disableddarken);
+    border-color: map-get($value, disabledBorder);
+  }
+}
+
+.btn {
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  color: $btn-color;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: $btn-border-width solid transparent;
+  font-size: $btn-font-size;
+  font-family: inherit;
+  line-height: $btn-line-height;
+  padding: $btn-padding-v $btn-padding-h;
+  border-radius: $btn-radius;
+  cursor: pointer;
+  -webkit-appearance: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:focus{
+    outline: none;
+  }
+}
+
+@each $darken, $value in $btn-theme-darkens {
+  .btn--#{$darken} {
+    @include button-variant($value);
+  }
+}
+
+.btn.disabled,
+.btn:disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn--mini {
+  padding: $btn-padding-v-sml $btn-padding-h-sml;
+}
+

@@ -1,0 +1,26 @@
+@import "../../config/styles/all.scss";
+
+.product-list {
+  &_container{
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: $component-spacing;
+    font-size: calc(10px + 2vmin);
+    color: $brand-white;
+
+    @media screen and (min-width: map-get($mediabreakpoints, md)) {
+      flex-direction: row;
+    }
+  }
+  &_nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: $component-spacing;
+  }
+}

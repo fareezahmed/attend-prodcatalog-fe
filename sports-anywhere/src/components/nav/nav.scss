@@ -1,0 +1,27 @@
+@import "../../config/styles/all.scss";
+
+header {
+    background-color: $brand-white;
+    text-align: center;
+}
+
+.App-logo {
+    height: 20px;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+  

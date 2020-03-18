@@ -1,0 +1,9 @@
+@import "../../config/styles/all.scss";
+
+footer {
+    border-top: $border-width $border-style $border-color;
+    color: $brand-white;
+    margin: 0;
+    padding: 18px;
+    text-align: center;
+}
