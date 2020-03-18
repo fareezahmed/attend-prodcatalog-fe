@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -11,28 +12,30 @@ import './card.scss';
 export default function MediaCard() {
   return (
     <Card className="card">
-      <CardActionArea>
-        <CardMedia
-          className="card_media"
-          image="../../assets/nodejs.svg"
-          title="Node Js Logo"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+        <Link to="/details">
+          <CardActionArea>
+            <CardMedia
+              className="card_media"
+              image="../../assets/nodejs.svg"
+              title="Node Js Logo"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h4" component="h2">
+                Lizard
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                across all continents except Antarctica
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Link>
+        <CardActions>
+          <Typography gutterBottom variant="h5" component="h3">
+            $1.00
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
         <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
+          Edit
         </Button>
       </CardActions>
     </Card>

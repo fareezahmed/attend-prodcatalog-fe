@@ -4,7 +4,14 @@
   background-color: $brand-background;
 }
 
+.main {
+  min-height: calc(100vh - 109px);
+}
+
 .App-link {
   color: $brand-link;
 }
 
+a {
+  text-decoration: none;
+}
