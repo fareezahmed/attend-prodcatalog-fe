@@ -3,7 +3,20 @@
 .card {
     margin: $component-spacing;
     max-width: 300px;
+    min-height: 400px;
     &_media {
         height: 140px,
+    }
+    &_link {    
+        display: flex;
+        justify-content: flex-end;
+        padding: 8px;
+        font-size: 16px;
+    }
+    &_footer{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 8px;
+        font-size: 10px;
     }
 }

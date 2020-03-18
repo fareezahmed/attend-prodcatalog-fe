@@ -1,0 +1,43 @@
+{
+    "products": [
+        {   
+            "id": "pro1",
+            "name": "Wedge Hit Shield",
+            "description": "The Club Double Wedge Hit Shield is a good addition to your training sessions for a variety of drills which involves breakdown and tackling technique.",
+            "price": 115.00,
+            "inventoryDate": "2020-01-01T23:28:56.782Z"
+
+        }, {
+            "id": "pro2",
+            "name": "Blitz Mouthguard",
+            "description": "The Blitz Mouthguards are designed for protection, comfort and unobstructed airflow.",
+            "price": 3.00,
+            "inventoryDate": "2020-01-01T23:28:56.782Z"
+
+        },
+        {
+            "id": "pro3",
+            "name": "Squistle",
+            "description": "Sounds just like a normal whistle! Squeeze it rather than blow into it for an easy to use whistle.",
+            "price": 21.50,
+            "inventoryDate": "2020-01-01T23:28:56.782Z"
+
+        },
+        {
+            "id": "pro4",
+            "name": "Club Netballs",
+            "description": "The Club Netball is the go to in training balls with excellent grip and durability.",
+            "price": 16.50,
+            "inventoryDate": "2020-01-01T23:28:56.782Z"
+
+        },
+        {
+            "id": "pro5",
+            "name": "Action Pump",
+            "description": "Fast, dual action inflating pump. Expels air through double action pushing and pulling of the handle",
+            "price": 9.90,
+            "inventoryDate": "2020-01-01T23:28:56.782Z"
+
+        }
+    ]
+}
