@@ -22,16 +22,17 @@ import { products } from './config/data.json';
 
 function App() {
   const { dispatch } = useContext(ProductContext);
-  const localState = JSON.parse(localStorage.getItem("products"));
+  
 
   useEffect(
     () => {
+      const localState = JSON.parse(localStorage.getItem("products"));
       dispatch({ type: Types.LIST_ALL, payload: localState || products });
       if(!localState) {
         localStorage.setItem("products", JSON.stringify(products))
       }
     },
-    [dispatch, localState]
+    [dispatch]
   );
   return (
     <Router>
