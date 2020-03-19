@@ -9,9 +9,14 @@ import App from './App';
 import Message from './config/intl/message';
 import * as serviceWorker from './serviceWorker';
 
+// Config
+import { ProductContextProvider } from './config/productContext';
+
 ReactDOM.render(
     <IntlProvider locale="en" messages={Message}>
-        <App />
+        <ProductContextProvider>
+            <App />
+        </ProductContextProvider>
     </IntlProvider>, 
     document.getElementById('root'));
 

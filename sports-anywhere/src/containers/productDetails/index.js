@@ -18,11 +18,11 @@ export default (props) => {
   const [editableForm, setEditableForm] = useState(mode === 'edit' ? false : true);
   const { state, dispatch } = useContext(ProductContext);
 
-  const currentProduct = Object.values(localState || state).filter((product) => {
+  const currentProduct = (localState || Object.values(state)).filter((product) => {
     return product.id === currentProductID;
   });
   
-  const potentialID = (localState || state).length;
+  const potentialID = localState.length + 1;
   const initialValues = currentProduct.length ? {
                           name: currentProduct[0].name,
                           description: currentProduct[0].description,
@@ -59,7 +59,7 @@ export default (props) => {
               props.history.push('/');
             } else {
               dispatch({ type: Types.ADD_PRODUCT, payload: {
-                id: potentialID,
+                id: potentialID.toString(),
                 name: values.name,
                 description: values.description,
                 price: values.price,

@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from 'react-intl';
 import InputBase from '@material-ui/core/InputBase';
@@ -8,7 +8,6 @@ import './product-list.scss';
 // Components
 import Card from '../../components/card';
 // Config
-import { products } from '../../config/data.json';
 import * as Types from '../../config/constants/actionTypes';
 import { ProductContext } from '../../config/productContext';
 
@@ -17,18 +16,11 @@ const localState = JSON.parse(localStorage.getItem("products"));
 export default () => {
   const { state, dispatch } = useContext(ProductContext);
  
-  useEffect(
-    () => {
-      dispatch({ type: Types.LIST_ALL, payload:  localState || JSON.parse(products) });
-    },
-    [dispatch]
-  );
-
   const onChangeHandler = (e) => {
     if(e.target.value){
       dispatch({ type: Types.SEARCH_PRODUCT, payload: e.target.value });
     } else {
-      dispatch({ type: Types.LIST_ALL, payload:  localState || JSON.parse(products) });
+      dispatch({ type: Types.LIST_ALL, payload: localState });
     }
   }
 
