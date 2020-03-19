@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav component component renders correctly 1`] = `
+<header
+  className="nav"
+>
+  <Link
+    replace={false}
+    to="/"
+  >
+    <WithStyles(ForwardRef(IconButton))
+      aria-label="menu"
+    >
+      <img
+        alt="logo"
+        className="App-logo"
+        src="logo.svg"
+      />
+      <WithStyles(ForwardRef(Typography))
+        variant="h6"
+      >
+        App Title
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(IconButton))>
+  </Link>
+</header>
+`;

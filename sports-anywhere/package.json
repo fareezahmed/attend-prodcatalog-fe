@@ -12,12 +12,12 @@
     "classnames": "^2.2.5",
     "formik": "^1.2.0",
     "formik-persist": "^1.1.0",
-    "i18n-js": "^3.0.1",
     "node-sass": "^4.13.1",
     "prop-types": "^15.5.10",
     "react": "^16.13.0",
     "react-app-rewired": "^2.1.5",
     "react-dom": "^16.13.0",
+    "react-intl": "^4.1.1",
     "react-router": "^4.0.0",
     "react-router-dom": "^4.0.0",
     "react-scripts": "3.4.0",
@@ -45,7 +45,23 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js"
+    ],
+    "coverageReporters": [
+      "text"
+    ],
+    "coverageDirectory": "./test/coverage/"
+  },
   "devDependencies": {
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.3",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",

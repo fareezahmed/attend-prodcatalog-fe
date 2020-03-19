@@ -1,37 +1,43 @@
 import React, { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import './product-list.scss';
-
-import Card from '../../components/card';
+import { FormattedMessage } from 'react-intl';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
-
+// Styles
+import './product-list.scss';
+// Components
+import Card from '../../components/card';
+// Config
 import { products } from '../../config/data.json';
+import * as Types from '../../config/constants/actionTypes';
 import { ProductContext } from '../../config/productContext';
+
+const localState = JSON.parse(localStorage.getItem("products"));
 
 export default () => {
   const { state, dispatch } = useContext(ProductContext);
-  const localState = JSON.parse(localStorage.getItem("products"));
-
+ 
   useEffect(
     () => {
-      dispatch({ type: "all", payload:  localState || products });
+      dispatch({ type: Types.LIST_ALL, payload:  localState || products });
     },
-    [localState, dispatch]
+    [dispatch]
   );
 
   const onChangeHander = (e) => {
     if(e.target.value){
-      dispatch({ type: "search", payload: e.target.value });
+      dispatch({ type: Types.SEARCH_PRODUCT, payload: e.target.value });
     } else {
-      dispatch({ type: "all", payload:  localState || products });
+      dispatch({ type: Types.LIST_ALL, payload:  localState || products });
     }
   }
 
   return (
       <div className="product-list">
         <div className="product-list_nav">
-          <Link className="btn btn--primary btn--mini" to="/details?mode=edit">Add</Link>
+          <Link className="btn btn--primary btn--mini" to="/details?mode=edit">
+            <FormattedMessage id="add" />
+          </Link>
           <div className="product-list_search">
             <div className="product-list_search_icon">
               <SearchIcon />
@@ -39,7 +45,7 @@ export default () => {
             <InputBase
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
-              onChange={onChangeHander}
+              onChange={ onChangeHander }
             />
           </div>
         </div>
@@ -51,7 +57,7 @@ export default () => {
               description,
               price,
               inventoryDate
-            }, i) => {
+            }) => {
               return <Card key={id} id={id} title={name} desc={description} price={price} date={inventoryDate} />
             })
           }

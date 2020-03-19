@@ -4,17 +4,18 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-
+import { FormattedMessage } from 'react-intl';
+// Styles and Assets
 import logo from './assets/logo.svg';
 import './App.scss';
-
+// Components
 import Nav from './components/nav'
 import Footer from './components/footer'
 import NotFound from './components/notFound'
-
+// Containers
 import ProductList from './containers/productList'
 import ProductDetails from './containers/productDetails'
-
+// Config
 import { ProductContextProvider } from './config/productContext';
 
 
@@ -22,7 +23,9 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Nav logo={logo} title="Sports Anywhere" />
+        <Nav logo={logo} title={
+          <FormattedMessage id="title" />
+        } />
         <ProductContextProvider>
           <div className="main">
             <Switch>
@@ -33,7 +36,7 @@ function App() {
           </div>
         </ProductContextProvider>
         <Footer>
-          Copyright © Fareez Ahmed 2014
+          <FormattedMessage id="footer" />
         </Footer>
       </div>
     </Router>

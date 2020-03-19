@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component Footer component renders correctly 1`] = `
+<Memo()
+  childern="Copyright © Fareez Ahmed 2014"
+>
+  <footer>
+    <p />
+  </footer>
+</Memo()>
+`;

@@ -1,6 +1,6 @@
 @import-normalize; /* bring in normalize.css styles */
 /* rest of app styles */
-@import "./utlis/reset.css";
+@import "./config/styles/reset.css";
 
 body {
   margin: 0;

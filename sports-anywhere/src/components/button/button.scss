@@ -20,7 +20,7 @@ $btn-theme-darkens: (
     bgHover: darken(pink, 60%),
     border: darken(pink, 30%),
     borderHover: darken(pink, 60%),
-    disabledColor: darken(white, 60%),
+    disabledColor: darken(white, 90%),
     disabledBg: darken(white, 30%),
     disabledBorder: darken(white, 30%)
   ),
@@ -31,7 +31,7 @@ $btn-theme-darkens: (
     bgHover: darken($brand-light-blue, 10%),
     border: darken($brand-light-blue, 30%),
     borderHover: darken($brand-light-blue, 50%),
-    disabledColor: darken(white, 30%),
+    disabledColor: darken(white, 90%),
     disabledBg: darken(white, 10%),
     disabledBorder: darken(white, 30%)
   ),
@@ -42,7 +42,7 @@ $btn-theme-darkens: (
     bgHover: darken(#4caf50, 10%),
     border: darken(#4caf50, 30%),
     borderHover: darken(#4caf50, 50%),
-    disabledColor: darken(white, 30%),
+    disabledColor: darken(white, 90%),
     disabledBg: darken(white, 10%),
     disabledBorder: darken(white, 30%)
   )
@@ -73,7 +73,7 @@ $btn-theme-darkens: (
   &.disabled,
   &:disabled{
     background-color: map-get($value, disabledBg);
-    color: map-get($value, disableddarken);
+    color: map-get($value, disabledColor);
     border-color: map-get($value, disabledBorder);
   }
 }
