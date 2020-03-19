@@ -5,7 +5,7 @@ exports[`Button component Default button component renders correctly 1`] = `
   <button
     className="btn btn--document"
   >
-    Facbook
+    Facebook
   </button>
 </Button>
 `;
@@ -17,7 +17,7 @@ exports[`Button component Primary button component renders correctly 1`] = `
   <button
     className="btn btn--primary"
   >
-    Facbook
+    Facebook
   </button>
 </Button>
 `;
@@ -29,7 +29,7 @@ exports[`Button component Primary button component renders correctly 2`] = `
   <button
     className="btn btn--secondary"
   >
-    Facbook
+    Facebook
   </button>
 </Button>
 `;
