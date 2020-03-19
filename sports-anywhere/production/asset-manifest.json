@@ -12,7 +12,7 @@
     "service-worker.js": "/service-worker.js",
     "static/css/main.6ef3cb63.chunk.css.map": "/static/css/main.6ef3cb63.chunk.css.map",
     "static/js/2.f7db12a9.chunk.js.LICENSE.txt": "/static/js/2.f7db12a9.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
+    "static/media/logo.svg": "./static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.93e686ee.js",
