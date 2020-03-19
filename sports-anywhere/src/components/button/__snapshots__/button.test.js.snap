@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button component Default button component renders correctly 1`] = `
-<Memo(Button)>
+<Button>
   <button
     className="btn btn--document"
   >
     Facbook
   </button>
-</Memo(Button)>
+</Button>
 `;
 
 exports[`Button component Primary button component renders correctly 1`] = `
-<Memo(Button)
+<Button
   variation="primary"
 >
   <button
@@ -19,11 +19,11 @@ exports[`Button component Primary button component renders correctly 1`] = `
   >
     Facbook
   </button>
-</Memo(Button)>
+</Button>
 `;
 
 exports[`Button component Primary button component renders correctly 2`] = `
-<Memo(Button)
+<Button
   variation="secondary"
 >
   <button
@@ -31,5 +31,5 @@ exports[`Button component Primary button component renders correctly 2`] = `
   >
     Facbook
   </button>
-</Memo(Button)>
+</Button>
 `;
