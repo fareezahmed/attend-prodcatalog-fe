@@ -12,10 +12,10 @@ import { products } from '../../config/data.json';
 
 const setup = (partialProps) => {
     const props = {
-        id: 1,
+        id: "1",
         title: "Card Title",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        price: "99.99",
+        price: 99.99,
         date: "2020-04-20",
         ...partialProps,
       }

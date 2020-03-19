@@ -4,6 +4,7 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import PropTypes from 'prop-types';
 
 import './card.scss';
 
@@ -40,5 +41,13 @@ export const ProductCard = ({
     </Typography>
   </div>
 </Card>);
+
+ProductCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  date: PropTypes.string.isRequired,
+}
 
 export default React.memo(ProductCard)

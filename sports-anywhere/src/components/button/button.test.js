@@ -6,7 +6,7 @@ import Button from './index';
 
 const setup = (partialProps) => {
     const props = {
-        childern: "Facbook",
+        children: "Facbook",
         ...partialProps,
       }
     const wrapper = mount(<Button { ...props } />);

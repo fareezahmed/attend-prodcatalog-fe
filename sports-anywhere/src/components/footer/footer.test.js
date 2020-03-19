@@ -6,7 +6,7 @@ import Footer from './index';
 
 const setup = (partialProps) => {
     const props = {
-        childern: "Copyright © Fareez Ahmed 2014",
+        children: "Copyright © Fareez Ahmed 2014",
         ...partialProps,
       }
     const wrapper = mount(<Footer { ...props } />);

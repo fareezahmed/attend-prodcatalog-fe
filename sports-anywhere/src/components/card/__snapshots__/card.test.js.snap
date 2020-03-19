@@ -46,8 +46,8 @@ exports[`Card component List Card components renders correctly 1`] = `
         <ProductCard
           date="2020-04-20"
           desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-          id={1}
-          price="99.99"
+          id="1"
+          price={99.99}
           title="Card Title"
         >
           <WithStyles(ForwardRef(Card))
@@ -488,8 +488,8 @@ exports[`Card component component renders correctly 1`] = `
         <ProductCard
           date="2020-04-20"
           desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-          id={1}
-          price="99.99"
+          id="1"
+          price={99.99}
           title="Card Title"
         >
           <WithStyles(ForwardRef(Card))

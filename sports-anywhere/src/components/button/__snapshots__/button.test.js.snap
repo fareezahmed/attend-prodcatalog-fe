@@ -1,33 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button component Default button component renders correctly 1`] = `
-<Memo()
-  childern="Facbook"
->
+<Memo(Button)>
   <button
     className="btn btn--document"
-  />
-</Memo()>
+  >
+    Facbook
+  </button>
+</Memo(Button)>
 `;
 
 exports[`Button component Primary button component renders correctly 1`] = `
-<Memo()
-  childern="Facbook"
+<Memo(Button)
   variation="primary"
 >
   <button
     className="btn btn--primary"
-  />
-</Memo()>
+  >
+    Facbook
+  </button>
+</Memo(Button)>
 `;
 
 exports[`Button component Primary button component renders correctly 2`] = `
-<Memo()
-  childern="Facbook"
+<Memo(Button)
   variation="secondary"
 >
   <button
     className="btn btn--secondary"
-  />
-</Memo()>
+  >
+    Facbook
+  </button>
+</Memo(Button)>
 `;
