@@ -19,16 +19,16 @@ export default () => {
  
   useEffect(
     () => {
-      dispatch({ type: Types.LIST_ALL, payload:  localState || products });
+      dispatch({ type: Types.LIST_ALL, payload:  localState || JSON.parse(products) });
     },
     [dispatch]
   );
 
-  const onChangeHander = (e) => {
+  const onChangeHandler = (e) => {
     if(e.target.value){
       dispatch({ type: Types.SEARCH_PRODUCT, payload: e.target.value });
     } else {
-      dispatch({ type: Types.LIST_ALL, payload:  localState || products });
+      dispatch({ type: Types.LIST_ALL, payload:  localState || JSON.parse(products) });
     }
   }
 
@@ -45,7 +45,7 @@ export default () => {
             <InputBase
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
-              onChange={ onChangeHander }
+              onChange={ onChangeHandler }
             />
           </div>
         </div>

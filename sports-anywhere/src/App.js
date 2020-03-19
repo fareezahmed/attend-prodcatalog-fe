@@ -9,12 +9,12 @@ import { FormattedMessage } from 'react-intl';
 import logo from './assets/logo.svg';
 import './App.scss';
 // Components
-import Nav from './components/nav'
-import Footer from './components/footer'
-import NotFound from './components/notFound'
+import Nav from './components/nav';
+import Footer from './components/footer';
+import NotFound from './components/notFound';
 // Containers
-import ProductList from './containers/productList'
-import ProductDetails from './containers/productDetails'
+import ProductList from './containers/productList';
+import ProductDetails from './containers/productDetails';
 // Config
 import { ProductContextProvider } from './config/productContext';
 

@@ -58,7 +58,6 @@ export default (props) => {
               } });
               props.history.push('/');
             } else {
-              console.log(potentialID)
               dispatch({ type: Types.ADD_PRODUCT, payload: {
                 id: potentialID,
                 name: values.name,
