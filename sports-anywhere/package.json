@@ -10,7 +10,7 @@
     "@testing-library/user-event": "^7.1.2",
     "formik": "^1.2.0",
     "formik-persist": "^1.1.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "prop-types": "^15.5.10",
     "react": "^16.13.0",
     "react-app-rewired": "^2.1.5",
